@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f284e852-00d0-4530-bd6b-f2c17ca0e344" activeEnvironment="Default" name="Usuario" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="4629a5d3-111f-4603-ba52-47a76e08b003" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8083" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8083</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Validar" path="/Usuario/servicios/usuarios/validar" id="ad8a9f90-8b10-42ae-b8e6-e33b5ce0deb9">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Validar 1" id="ab18276b-99cb-4f24-a216-a357c3be3b07" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:val="http://localhost/Usuario/servicios/usuarios/validar">val:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=utf-8</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="adf055e7-a67f-4fd6-a5c3-b546b63a030a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8083</con:endpoint>
+          <con:request>{
+"idUsuario": 123333,
+"idConvenio": 1,
+"idMedioPago": 1,
+"idFacturaPago": 1 
+}</con:request>
+          <con:originalUri>http://localhost/Usuario/servicios/usuarios/validar</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>

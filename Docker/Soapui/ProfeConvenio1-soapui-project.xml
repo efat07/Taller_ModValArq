@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4a46570b-5785-485c-b09e-5e12caf2a271" activeEnvironment="Default" name="ProfeConvenio1" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="42061d00-4bf1-407a-b077-a0640ef73861" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:9090" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:9090</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Payments" path="/W1-REST-Service/servicios/pagos/v1/payments/777" id="fcbcd5e6-c30f-4b15-8f4d-5349da2d3bd7">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Payments 1" id="d254d771-db60-4378-b394-db9fa89fe1df" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/W1-REST-Service/servicios/pagos/v1/payments/2">ns:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="758d2aa7-35e8-430e-a767-8a8a3301caae" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:9090</con:endpoint>
+          <con:request>{
+
+}</con:request>
+          <con:originalUri>http://localhost/W1-REST-Service/servicios/pagos/v1/payments/2</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>

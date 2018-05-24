@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="60333cea-14ac-4f92-b381-461353a0b7a0" activeEnvironment="Default" name="Convenio" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="9a0fb283-253a-42b7-a509-5d5c0e430e46" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8084" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8084</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Seleccionar" path="/Convenio/servicios/convenios/seleccionar" id="8d024cd7-daa2-4ded-81a2-353931821b1e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Seleccionar 1" id="14fc7952-0894-4285-b010-97158dc58584" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:sel="http://localhost/Convenio/servicios/convenios/seleccionar">sel:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="7601f3b0-95e9-48e4-b6ba-184a6b0a3bdf" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8084</con:endpoint>
+          <con:request>{
+"idUsuario": 1,
+"idConvenio": 1,
+"idMedioPago": 1,
+"idFacturaPago": 1 
+}</con:request>
+          <con:originalUri>http://localhost/Convenio/servicios/convenios/seleccionar</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
