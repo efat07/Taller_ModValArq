@@ -8,8 +8,11 @@ Patrones implementados:
 Dispatcher: Se encarga de realizar el llamado a otro servicio para transformar el mensaje y posteriormente envia el mensaje al servicio exterior correpondiente de acuerdo al servicio que se esta recaudando.
 Intermediate Routing: Se encarga de encontrar las rutas externas a los convenios.
 
+Orquestación de servicios
+Se realiza una orquestación de servicios (composición de servicios) en donde el Coordinador de pagos es el servicio encargado de definirla lógica de la interacción entre los diferentes servicios creados para cumplir con la funcionalidad de realización de pagos a servicios públicos.
+
 Herramientas:
-JAVA: Lenguaje en el que se desarrollo la funcionalidad.
+JAVA: Lenguaje en el que se desarrolló la funcionalidad.
 Archivo Servicios: Archivo con los servicios y sus respectivas URLs, en este archivo se crean y modifican los convenios para los cuales esta permitido el recaudo de los servicios.
 WSO2: Herramienta utilizada para el gobierno de los servicios.
 
