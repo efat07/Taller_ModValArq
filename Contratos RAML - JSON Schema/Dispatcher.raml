@@ -1,0 +1,50 @@
+#%RAML 1.0
+title: Servicio encargado de despachar las comunicaciones a los servicios externos de los convenios
+mediaType: application/json
+baseUri: http://localhost:8087/Dispatcher/servicios
+version: v1
+
+/dispatcher/infofactura
+    post:
+        description: Permite redirigirse a los servicios externos de los convenios para consultar el valor de pago de la factura
+        body:
+            application/json:
+                properties:
+                    idFacturaPago: number
+                    url:           string
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago: number
+                            valorPago:     string
+                            mensaje:       string
+            404:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago: number
+                            mensaje:       string
+                            
+/dispatcher/pagofactura
+    post:
+        description: Permite redirigirse a los servicios externos de los convenios para pagar la factura
+        body:
+            application/json:
+                properties:
+                    idFacturaPago: number
+                    url:           string
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago: number
+                            mensaje:       string
+            404:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago: number
+                            mensaje:       string

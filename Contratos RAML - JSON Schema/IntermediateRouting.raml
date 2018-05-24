@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: Servicio encargado enrutar a las urls correspondientes al convenio de los servicios externos
+mediaType: application/json
+baseUri: http://localhost:8086/IntermediateRouting/servicios
+version: v1
+
+/routing/{idConvenio}
+    get:
+        description: Retorna la url del servicio externo segun el convenio
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idCovenio: number
+                            nombre:    string
+                            url:       string
+                            codError:  number
+            404:
+                description: La url del convenio no existe

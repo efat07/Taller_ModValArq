@@ -1,0 +1,26 @@
+#%RAML 1.0
+title: Servicio para la gestion y validacion de usuarios
+mediaType: application/json
+baseUri: http://localhost:8083/Usuario/servicios
+version: v1
+
+/usuarios/validar
+    post:
+        description: Permite validar la existencia del usuario y que se encuentre habilitado para pagar servicios publicos
+        body:
+            application/json:
+                properties:
+                    idUsuario: number
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idUsuario: number
+                            mensaje:   string
+            404:
+                body:
+                    application/json:
+                        properties:
+                            idUsuario: number
+                            mensaje:   string

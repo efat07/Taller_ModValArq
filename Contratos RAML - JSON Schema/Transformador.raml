@@ -1,0 +1,55 @@
+#%RAML 1.0
+title: Servicio encargado de realizar las transformaciones de los mensajes enviados y recibidos hacia y desde los servicios externos de los convenios
+mediaType: application/json
+baseUri: http://localhost:8089/Transformador/servicios
+version: v1
+
+/transformador/consultavalor
+    post:
+        description: Transforma el mensaje para la consulta del valor de la factura cuando el servicio externo devuelve la respuesta
+        body:
+            application/json:
+                properties:
+                    idFactura: number
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            valorPago: number
+            404:
+                description: No fue posible la transformaciones
+                
+/transformador/pagarvalorida
+    post:
+        description: Transforma el mensaje para el pago de la factura antes de que el dispatcher envie la solicitud del servicio del banco hasta el servicio externo del convenio
+        body:
+            application/json:
+                properties:
+                    idFacturaPago: number
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idFactura: number
+            404:
+                description: No fue posible la transformaciones
+                
+/transformador/pagarvalorregreso
+    post:
+        description: Transforma el mensaje para el pago de la factura despues de que el dispatcher envió la solicitud del servicio del banco hasta el servicio externo del convenio
+        body:
+            application/json:
+                properties:
+                    idFactura: number
+                    mensaje:   string
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago: number
+                            mensaje:       string
+            404:
+                description: No fue posible la transformaciones

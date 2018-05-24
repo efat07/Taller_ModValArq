@@ -1,0 +1,27 @@
+#%RAML 1.0
+title: Servicio encargado gestionar, validar y seleccionar el medio de pago
+mediaType: application/json
+baseUri: http://localhost:8085/MedioPago/servicios
+version: v1
+
+/mediopago/seleccionar
+    post:
+        description: Permite validar y seleccionar el medio de pago
+        body:
+            application/json:
+                properties:
+                    idMedioPago: number
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idMedioPago:     number
+                            nombreMedioPago: string
+                            mensaje:         string
+            404:
+                body:
+                    application/json:
+                        properties:
+                            idMedioPago: number
+                            mensaje:     string

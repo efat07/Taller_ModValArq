@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: Servicio para la gestion,validacion y seleccion de los convenios - Ejemplo-Agua-Energia-Telefono-etc
+mediaType: application/json
+baseUri: http://localhost:8084/Convenio/servicios
+version: v1
+
+/convenios/seleccionar
+    post:
+        description: Permite validar y seleccionar el convenio registrado que se va a pagar
+        body:
+            application/json:
+                properties:
+                    idConvenio:     number
+                    nombreCOnvenio: string
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idConvenio:     number
+                            nombreConvenio: string
+                            mensaje:        string
+            404:
+                body:
+                    application/json:
+                        properties:
+                            idConvenio:     number
+                            mensaje:        string

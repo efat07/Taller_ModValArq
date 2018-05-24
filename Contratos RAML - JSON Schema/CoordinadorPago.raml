@@ -1,0 +1,32 @@
+#%RAML 1.0
+title: Servicio encargado de componer y orquestar los servicios para la realizacion del pago del sevicio publico
+mediaType: application/json
+baseUri: http://localhost:8088/CoordinadorPago/servicios
+version: v1
+
+/pagos/pagarfactura
+    post:
+        description: Permite realizar el pago de la factura al convenio seleccionado
+        body:
+            application/json:
+                properties:
+                    idUsuario:     number
+                    idConvenio:    number
+                    idFacturaPago: number
+                    idMedioPago:   number
+        responses:
+            200:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago:   number
+                            nombreConvenio:  string
+                            nombreMedioPago: string
+                            valorPago:       number
+                            mensaje:         string
+            404:
+                body:
+                    application/json:
+                        properties:
+                            idFacturaPago:   number
+                            mensaje:         string
