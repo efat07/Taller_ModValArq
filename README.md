@@ -24,3 +24,5 @@ IntermediateRouting: Servicio que consulta en un archivo la url a la que se debe
 Transformador: Servicio que transforma los datos a la estructura de los servicios externos 
 Dispatcher: Servicio que realiza el llamado al servicio transformador y posteriormengte llama a los servicios externos de los recaudadores para realizar el pago. 
 Coordinador Pago: Servicio orquestador de servicios.
+
+Ver imagen del Diagrama de arquitectura de servicios implementada.
